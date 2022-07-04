@@ -10,7 +10,7 @@ We checked Aleo and Umbral documentation and we would like to test 2 scenarios:
 
 ![Aleo Umbral Approach #2](https://raw.githubusercontent.com/4sm-ops/aleo-pyumbral-poc/master/assets/aleo-umbral-approach_2.png)
 
-# Umbral SecretKey from byte_read of Aleo Private Key
+# Umbral SecretKey from from_bytes of Aleo Private Key
 
 PoC code: https://github.com/4sm-ops/aleo-pyumbral-poc/blob/master/test_01_pyumbral_keys.py
 
