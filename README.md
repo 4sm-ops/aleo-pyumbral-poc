@@ -2,7 +2,7 @@
 
 We checked Aleo and Umbral documentation and we would like to test 2 scenarios:
 
-1. Umbral SecretKey from byte_read of Aleo Private Key SHA256 hash 32 bytes long
+1. Umbral SecretKey from from_bytes of Aleo Private Key SHA256 hash 32 bytes long
 
 ![Aleo Umbral Approach #1](https://raw.githubusercontent.com/4sm-ops/aleo-pyumbral-poc/master/assets/aleo-umbral-approach_1.png)
 
