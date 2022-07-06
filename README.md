@@ -71,3 +71,31 @@ b'Aleo Private Key usage PoC. Plaintext'
 Bob decrypted text:
 b'Aleo Private Key usage PoC. Plaintext'
 ```
+
+# Aleo and Umbral Private/Secret Keys can be generated from single 32 bytes seed
+
+## Overview
+
+Both Aleo and Umbral Private/Secret Keys can be generated from 32 bytes seed.
+
+## Umbral SecretKey from seed
+
+```
+classmethod from_secure_randomness(seed: bytes) → umbral.keys.SecretKeyFactory[source]
+Creates a secret key factory using the given random bytes (of size seed_size()).
+```
+
+## Aleo Private Key from seed
+
+https://github.com/AleoHQ/nemean/blob/6507d3d21e3177eb9fa0e803862ea8b5fbb93b3a/account/privatekey.go
+
+```
+// String implements the stringer interface for PrivateKey.
+// Returns the base58 encoded string.
+func (pk PrivateKey) String() string {
+	var buf bytes.Buffer
+	buf.Write(privateKeyPrefix)
+	buf.Write(pk.Seed[:])
+	return base58.Encode(buf.Bytes())
+}
+```
